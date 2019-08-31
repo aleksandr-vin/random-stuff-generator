@@ -1,4 +1,3 @@
-TBD
+Random Stuff Generator
 
-Your context:
-{{.}}
+Try /choices/random/badge.svg?font-size=20&choices=foo&choices=bar&choices=baz

@@ -1,8 +1,8 @@
 # Random Stuff Generator
 
-## Bage in SVG
+## Badge in SVG
 
-Check _/choices/random/bage.svg?choices=foo&choices=bar&choices=baz_.
+Check _/choices/random/badge.svg?choices=foo&choices=bar&choices=baz_.
 
 ## Features
 
