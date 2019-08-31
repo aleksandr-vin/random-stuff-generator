@@ -30,7 +30,7 @@ app.use(morgan('combined'))
 
 app.use(cookieParser());
 
-app.get('/choices/random.svg', (req, res) => {
+app.get('/choices/random/bage.svg', (req, res) => {
     defaults = {
         "maxAge": 60 * 60 * 3, // seconds
         "text": "...",
