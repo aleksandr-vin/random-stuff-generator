@@ -1,0 +1,20 @@
+{
+  "name": "random-stuff-generator",
+  "version": "1.0.0",
+  "description": "Web server generating random stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "avinokurov@stackstate.com",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "mustache": "^3.0.3",
+    "mustache-express": "^1.2.8",
+    "object-hash": "^1.3.1"
+  }
+}
