@@ -30,8 +30,8 @@ app.use(morgan('combined'))
 
 app.use(cookieParser());
 
-app.get('/choices/random/badge.svg', (req, res) => {
-    defaults = {
+app.get('/', (req, res) => {
+    const defaults = {
         "maxAge": 60 * 60 * 3, // seconds
         "text": "...",
         "x": "100%",
@@ -51,7 +51,7 @@ app.get('/choices/random/badge.svg', (req, res) => {
         let cn = cookieName(choices)
         console.log(req.cookies);
         if (typeof req.cookies != 'undefined' && cn in req.cookies) {
-            cv = req.cookies[cn]
+            let cv = req.cookies[cn]
             if ('choice' in cv && 'expires' in cv) {
                 let ce = new Date(cv.expires)
                 if (ce > now) {
@@ -93,4 +93,4 @@ app.get('/choices/random/badge.svg', (req, res) => {
     }
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+module.exports = app
