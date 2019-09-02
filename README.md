@@ -2,7 +2,7 @@
 
 ## Badge in SVG
 
-Check _/choices/random/badge.svg?choices=foo&choices=bar&choices=baz_.
+Check _/?choices=foo&choices=bar&choices=baz_.
 
 ## Features
 
