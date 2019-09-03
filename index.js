@@ -42,8 +42,7 @@ app.get('/', (req, res) => {
         "font-size": 120,
         "text-anchor": "middle",
         "dominant-baseline": "middle",
-        "fill": "blue",
-        "bgcolor": "orange"
+        "fill": "blue"
     }
     var ctx = normalize({...defaults, ...req.query})
     if ('choices' in req.query) {
