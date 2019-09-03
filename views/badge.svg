@@ -14,4 +14,8 @@
       fill="{{fill}}">
     {{text}}
   </text>
+
+  <!-- 
+{{{dump}}}
+-->
 </svg>

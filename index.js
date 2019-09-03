@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const me = require('mustache-express')
 const cookieParser = require('cookie-parser')
 const hash = require('object-hash')
+const util = require('util')
 
 function randomChoice(choices) {
   var index = Math.floor(Math.random() * choices.length);
@@ -73,6 +74,7 @@ app.get('/', (req, res) => {
             signed: false
         }
         ctx.text = ctx.choice
+        ctx.dump = util.inspect(ctx, {showHidden: false, depth: null})
         res.cookie(cn, {
             "choice": ctx.choice,
             "expires": ctx.expires

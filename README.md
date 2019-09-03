@@ -2,7 +2,7 @@
 
 ## Badge in SVG
 
-Check _/?choices=foo&choices=bar&choices=baz_.
+Check _/?choices[0]=foo&choices[1]=bar&choices[2]=baz_.
 
 ## Features
 

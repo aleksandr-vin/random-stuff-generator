@@ -1,3 +1,3 @@
 Random Stuff Generator
 
-Try /?font-size=20&choices=foo&choices=bar&choices=baz
+Try /?font-size=20&choices[0]=foo&choices[1]=bar&choices[2]=baz
