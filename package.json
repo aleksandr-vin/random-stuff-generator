@@ -4,8 +4,7 @@
   "description": "Web server generating random stuff",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "update-lambda": "find . -name '*~' -delete -print && rm -f lambdaFunc.zip && zip -r lambdaFunc.zip . && aws lambda update-function-code --function-name RandomChoices --zip-file fileb://$(pwd)/lambdaFunc.zip",
+      "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.local.js"
   },
   "author": "avinokurov@stackstate.com",
