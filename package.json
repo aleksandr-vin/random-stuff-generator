@@ -1,7 +1,7 @@
 {
   "name": "random-stuff-generator",
   "version": "1.0.0",
-  "description": "Web server generating random stuff",
+  "description": "Web server (or AWS Lambda) generating SVG with random choice. Also Expires, goes with Cookies and control Caching",
   "main": "index.js",
   "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
