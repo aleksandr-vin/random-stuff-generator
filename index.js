@@ -52,20 +52,23 @@ app.get('/', (req, res) => {
         console.log(req.cookies);
         if (typeof req.cookies != 'undefined' && cn in req.cookies) {
             let cv = req.cookies[cn]
-            if ('choice' in cv && 'expires' in cv) {
+            if ('choice' in cv && 'expires' in cv && 'date' in cv) {
                 let ce = new Date(cv.expires)
                 if (ce > now) {
                     ctx.choice = cv.choice
                     ctx.expires = ce
+                    let cd = new Date(cv.date)
+                    ctx.date = cv.date
                 }
             }
         }
         if (!('choice' in ctx)) {
             console.log("Making a random choice")
             ctx.choice = randomChoice(choices)
-            const dt = now
+            const dt = new Date(now.getTime())
             dt.setSeconds(dt.getSeconds() + ctx.maxAge);
             ctx.expires = dt
+            ctx.date = now
         }
         let options = {
             expires: ctx.expires,
@@ -76,7 +79,8 @@ app.get('/', (req, res) => {
         ctx.dump = util.inspect(ctx, {showHidden: false, depth: null})
         res.cookie(cn, {
             "choice": ctx.choice,
-            "expires": ctx.expires
+            "expires": ctx.expires,
+            "date": ctx.date
         }, options)
         res.set('Cache-Control', 'private, max-age=' + ctx.maxAge);
         res.set('Expires', ctx.expires.toUTCString());
